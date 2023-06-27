@@ -214,6 +214,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1131633792692522642, guid: aac5cd9c226604b47b4c9fe1a601404f, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1131633792692522642, guid: aac5cd9c226604b47b4c9fe1a601404f, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968315051222956413, guid: aac5cd9c226604b47b4c9fe1a601404f, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968315051222956413, guid: aac5cd9c226604b47b4c9fe1a601404f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968315051222956413, guid: aac5cd9c226604b47b4c9fe1a601404f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968315051222956413, guid: aac5cd9c226604b47b4c9fe1a601404f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7579599750139581439, guid: aac5cd9c226604b47b4c9fe1a601404f, type: 3}
       propertyPath: m_RootOrder
       value: 2
