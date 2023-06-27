@@ -176,7 +176,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.123291
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -238,6 +238,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5968315051222956413, guid: aac5cd9c226604b47b4c9fe1a601404f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7579599750139581439, guid: aac5cd9c226604b47b4c9fe1a601404f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -295,6 +299,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1648123770813762087, guid: f179820e834d8164cb1dc5a55c7d1211, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648123770813762087, guid: f179820e834d8164cb1dc5a55c7d1211, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648123770813762087, guid: f179820e834d8164cb1dc5a55c7d1211, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648123770813762087, guid: f179820e834d8164cb1dc5a55c7d1211, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1648123770813762087, guid: f179820e834d8164cb1dc5a55c7d1211, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 11b2d6a766f5e7440b8c368cfea32df4, type: 2}
+    - target: {fileID: 1770348431373919422, guid: f179820e834d8164cb1dc5a55c7d1211, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2016195476065997199, guid: f179820e834d8164cb1dc5a55c7d1211, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -339,9 +367,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5519978790911331149, guid: f179820e834d8164cb1dc5a55c7d1211, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1162847747}
+    - target: {fileID: 5519978790911331149, guid: f179820e834d8164cb1dc5a55c7d1211, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540825032542265529, guid: f179820e834d8164cb1dc5a55c7d1211, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8327206416456002022, guid: f179820e834d8164cb1dc5a55c7d1211, type: 3}
       propertyPath: m_Name
       value: BackGround
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327206416456002022, guid: f179820e834d8164cb1dc5a55c7d1211, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f179820e834d8164cb1dc5a55c7d1211, type: 3}
