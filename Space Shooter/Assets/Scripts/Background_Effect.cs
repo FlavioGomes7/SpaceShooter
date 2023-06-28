@@ -18,7 +18,7 @@ public class Background_Effect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        offSet.Set(transform.position.x, transform.position.y);
-        mat.mainTextureOffset = offSet;
+        offSet.Set(-transform.position.x, -transform.position.y);
+        mat.mainTextureOffset = offSet / 5;
     }
 }

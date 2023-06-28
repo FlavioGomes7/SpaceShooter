@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class Following_Camera : MonoBehaviour
 {
-    GameObject tf;
-    GameObject player;
-    Vector2 pos;
+    private Vector3 offSet = new Vector3(0f, 0, -10f);
+    private float smoothTime = 0.5f;
+    private Vector3 velocity = Vector3.zero;
+    Vector3 targetPosition;
+    [SerializeField] private Transform target;
 
-    void Start()
+    void FixedUpdate()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        tf = gameObject;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-      pos.Set(tf.transform.position.x, tf.transform.position.y);
+      if(target == null)
+      {
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+      }
+      targetPosition = target.position + offSet;
+      transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+    
     }
 }
