@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Background_Effect : MonoBehaviour
 {
-    CanvasRenderer rt;
+    MeshRenderer rt;
     Material mat;
     Vector2 offSet; 
     // Start is called before the first frame update
     void Start()
     {
-        rt = GetComponent<CanvasRenderer>();
-        mat = rt.GetMaterial();
+        rt = GetComponent<MeshRenderer>();
+        mat = rt.material ;
         offSet = mat.mainTextureOffset;
     }
 
     // Update is called once per frame
     void Update()
     {
-        offSet.x += Time.deltaTime;
+        offSet.Set(transform.position.x, transform.position.y);
         mat.mainTextureOffset = offSet;
     }
 }
