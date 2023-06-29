@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    //Instanciate
+    public static GameManager instance;
 
+    //Menu
     [SerializeField] private GameObject menu;
     [SerializeField] private GameObject botoesMenu;
     [SerializeField] private GameObject botoesSeleçao;
+    [SerializeField] private GameObject botoesPause;
+
+    //Ship
     [SerializeField] private GameObject[] space_Ship;
     [SerializeField] private Transform spawn;
+
+    void Awake()
+    {
+        instance = this;
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -42,7 +53,6 @@ public class GameManager : MonoBehaviour
         botoesSeleçao.SetActive(false);
         Instantiate(space_Ship[0], spawn);
         
-        
     }
 
     public void SelectShipTwo()
@@ -51,7 +61,6 @@ public class GameManager : MonoBehaviour
         botoesSeleçao.SetActive(false);
         menu.SetActive(false);
         Instantiate(space_Ship[1], spawn);
-        
     }
 
     public void SelectShipThree()
@@ -68,5 +77,24 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         menu.SetActive(true);
         botoesMenu.SetActive(true);
+        botoesPause.SetActive(false);
+        botoesSeleçao.SetActive(false);
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
+        Destroy(GameObject.FindGameObjectWithTag("Enemy"));
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+        menu.SetActive(true);
+        botoesPause.SetActive(true);
+
+    }
+    
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        menu.SetActive(false);
+        botoesPause.SetActive(false);
     }
 }
