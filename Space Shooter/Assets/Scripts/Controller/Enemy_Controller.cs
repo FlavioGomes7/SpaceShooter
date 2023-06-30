@@ -8,6 +8,7 @@ public class Enemy_Controller : MonoBehaviour
     private int hp;
     private int attack;
     private float speed;
+    private int value;
     [SerializeField] private Enemy_SO enemy_info;
     [SerializeField] private Rigidbody2D rb;
 
@@ -23,13 +24,14 @@ public class Enemy_Controller : MonoBehaviour
         hp = enemy_info.Hp;
         speed = enemy_info.Speed;
         attack = enemy_info.Attack;
+        value = enemy_info.Value;
         direction = player.transform.position - transform.position;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * speed;
     }
 
     void Update()
     {
-        
+       
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -45,7 +47,8 @@ public class Enemy_Controller : MonoBehaviour
         hp -= damage;
         if(hp <= 0)
         {
-            Die();
+           GameManager.instance.AddPoints(value);
+           Die();
         }
 
     }

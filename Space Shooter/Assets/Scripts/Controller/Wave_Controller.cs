@@ -35,7 +35,7 @@ public class Wave_Controller : MonoBehaviour
         int lastNumber = 0;
         for(int i = 0; i < 6; i++)
         {
-            Debug.Log(i);
+            
             randomNumber = Random.Range(0, 3);
             if(randomNumber == lastNumber)
             {

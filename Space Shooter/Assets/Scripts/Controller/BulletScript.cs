@@ -7,11 +7,22 @@ public class BulletScript : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private Space_Ship_SO space_Ship;
     private Rigidbody2D rb;
+    private float timer;
+    private float timerMax = 5f;
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         rb.velocity = transform.up * speed;
+    }
+
+    void Update()
+    {
+        timer += Time.deltaTime;
+        if(timer > timerMax)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)

@@ -7,7 +7,7 @@ public class SpaceShip_Controller : MonoBehaviour
     //Status & Componentes
     private Rigidbody2D rb;
     [SerializeField] private Space_Ship_SO space_Ship;
-    [SerializeField] private int hp;
+    private int hp;
     private float speed;
     private float attack;
 
@@ -24,7 +24,6 @@ public class SpaceShip_Controller : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firePoint;
 
-    public int hp_check => hp;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +42,16 @@ public class SpaceShip_Controller : MonoBehaviour
         //GameOver
         if(hp <= 0)
         {
+
+            GameManager.instance.NewHighScore();
+            GameManager.instance.ResetPoints();
             GameManager.instance.BackToMenu();
+            GameManager.instance.ClearEnemies("Enemy");
+            Destroy(gameObject);       
+        }
+        else
+        {
+            GameManager.instance.ShowLife(hp);
         }
 
         //Movimentação
